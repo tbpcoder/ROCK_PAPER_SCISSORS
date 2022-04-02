@@ -1,7 +1,7 @@
 
 
 function computerPlay(){
-    let temp=Math.floor(Math.random() * 2);
+    let temp=Math.floor(Math.random() * 3);
     switch(temp){
         case 0:
             return "rock";
@@ -19,26 +19,28 @@ function computerPlay(){
 
 let scorep=0,scorec=0;
 
-function game(inp,computerPlay){
-    if(inp==computerPlay){
-        console.log("It's a tie with"+inp);
-    }else if((inp=="rock"&&computerPlay=="paper")||(inp=="paper"&&computerPlay=="scissors")||(inp=="scissors"&&computerPlay=="rock")){
-        console.log("You lost: "+computerPlay+"beats"+inp);
+function game(inp,temp){
+    if(inp==temp){
+        alert(`It's a tie with ${inp}`);
+    }else if((inp=="rock"&&temp=="paper")||(inp=="paper"&&temp=="scissors")||(inp=="scissors"&&temp=="rock")){
         scorec++;
+        alert(`You lost: ${temp} beats ${inp}`);
     }else{
-        console.log("You won: "+inp+"beats"+computerPlay);
         scorep++;
+        alert(`You won: ${inp} beats ${temp}`);
     }
 }
 
 let playerinp;
 
-for(let i=0;i<5;i++){
+while(scorec!=1||scorep!=1){
     playerinp=prompt("Choose rock, paper, scissors: ","rock");
     if(playerinp==null){
         console.log("Empty input exiting.");
     }
-    game(playerinp.toLowerCase,computerPlay);
+    let temp=computerPlay();
+    playerinp=playerinp.toLowerCase();
+    game(playerinp,temp);
 }
 
 if(scorep>scorec){
