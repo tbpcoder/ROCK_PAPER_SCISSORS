@@ -33,7 +33,7 @@ function game(inp,temp){
 
 let playerinp;
 
-while(scorec!=5||scorep!=5){
+while(scorec!=1&&scorep!=1){
     playerinp=prompt("Choose rock, paper, scissors: ","rock");
     if(playerinp==null){
         console.log("Empty input, exiting");
