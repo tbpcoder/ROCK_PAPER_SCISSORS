@@ -37,21 +37,22 @@ let playerinp;
 
 
 while(scorec!=5&&scorep!=5){
-    let img=document.getElementsByTagName('img').dataKey;
-    console.log('img');
-    img.addEventListener("click",function(e){
-        const playerinp=document.querySelector( `img[data-key="${e.keyCode}"]`);
-        console.log(playerinp);
-    })
+    let img=document.querySelectorAll('img');
+    img.forEach(element => {
+        element.addEventListener('click',function(e){
+            playerinp=this.getAttribute(data-key);
+            console.log(playerinp);
+        })
+    });
 }
 
 function checkScore(){
-if(scorep>scorec){
-    return "You won against AI! You are the last hope for humanity when AI takes over the planet";
-}else if(scorec<scorep){
-    return "You lost against a bot.";
-}else{
-    return "You and the bot have the same score.";
-}
+    if(scorep>scorec){
+        return "You won against AI! You are the last hope for humanity when AI takes over the planet";
+    }else if(scorec<scorep){
+        return "You lost against a bot.";
+    }else{
+        return "You and the bot have the same score.";
+    }
 }
 

@@ -6,10 +6,10 @@ body{
     display:flex;
     flex-direction:column;
     text-align:center;
-    color:rgb(255, 193, 60);
+    color:black;
     margin:0;
     padding:0;
-    background-color: rgb(41, 41, 41);
+    background-color: rgb(98, 255, 25);
     justify-content:space-between;
     height: 100%;
 
@@ -17,8 +17,9 @@ body{
 
 .header{
     padding:20px;
-    background-color:black;
+    background-color:rgb(161, 0, 107);
     box-shadow: 5px 10px 18px rgb(82, 82, 82);
+    color:rgb(255, 193, 60);
 }
 
 
@@ -52,7 +53,8 @@ img{
 
 .footer{
     padding:20px;
-    background-color:#111111;
+    background-color: rgb(161, 0, 107);
+    color:rgb(255, 193, 60);
 }
 
 img:hover{
