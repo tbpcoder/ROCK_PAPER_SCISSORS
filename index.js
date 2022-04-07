@@ -34,16 +34,29 @@ function game(inp,temp){
 
 
 let playerinp;
+let img=document.querySelectorAll('img');
+img.forEach(element => {
+    element.addEventListener('click',function(e){
+        playerinp=this.getAttribute('data-key');
+        console.log(playerinp);
+    })
+});
 
 
-while(scorec!=5&&scorep!=5){
-    let img=document.querySelectorAll('img');
-    img.forEach(element => {
-        element.addEventListener('click',function(e){
-            playerinp=this.getAttribute(data-key);
-            console.log(playerinp);
-        })
-    });
+let temp1=checkScore();
+let temp2=document.getElementsByClassName('last-part').innerText=temp1;
+temp2.style.fontSize('20px');
+document.getElementsByClassName('toph').innerText='';
+document.getElementsByTagName('h2').innerText='';
+
+
+function play(playerinp){
+    while(scorec<5||scorep<5){
+        let temp=game(playerinp,computerPlay());
+        document.getElementsByClassName('ps').innerText= scorep;
+        document.getElementsByClassName('cs').innerText= scorec;
+        document.getElementsByClassName('toph').innerText=temp;
+    }
 }
 
 function checkScore(){
