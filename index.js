@@ -21,13 +21,13 @@ let scorep=0,scorec=0;
 
 function game(inp,temp){
     if(inp==temp){
-        alert(`It's a tie with ${inp}`);
+        return `It's a tie with ${inp}`;
     }else if((inp=="rock"&&temp=="paper")||(inp=="paper"&&temp=="scissors")||(inp=="scissors"&&temp=="rock")){
         scorec++;
-        alert(`You lost: ${temp} beats ${inp}`);
+       return `You lost: ${temp} beats ${inp}`;
     }else{
         scorep++;
-        alert(`You won: ${inp} beats ${temp}`);
+        return `You won: ${inp} beats ${temp}`;
     }
 }
 
@@ -35,14 +35,23 @@ function game(inp,temp){
 
 let playerinp;
 
+
 while(scorec!=5&&scorep!=5){
-    playerinp=document.querySelector("")
+    let img=document.getElementsByTagName('img').dataKey;
+    console.log('img');
+    img.addEventListener("click",function(e){
+        const playerinp=document.querySelector( `img[data-key="${e.keyCode}"]`);
+        console.log(playerinp);
+    })
 }
 
+function checkScore(){
 if(scorep>scorec){
-    console.log("You won against AI! You are the last hope for humanity when AI takes over the planet");
+    return "You won against AI! You are the last hope for humanity when AI takes over the planet";
 }else if(scorec<scorep){
-    console.log("You lost against a bot.");
+    return "You lost against a bot.";
 }else{
-    console.log("You and the bot have the same score.")
+    return "You and the bot have the same score.";
 }
+}
+
