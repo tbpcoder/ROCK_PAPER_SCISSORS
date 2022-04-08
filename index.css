@@ -9,17 +9,19 @@ body{
     color:rgb(0, 0, 0);
     margin:0;
     padding:0;
-    background-image: linear-gradient(to bottom right, rgb(208, 255, 0), rgb(0, 255, 85));
+    background-image: linear-gradient( rgb(161, 197, 0), rgb(0, 160, 53));
     justify-content:space-between;
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 
 }
 
 .header{
     padding:20px;
-    background-color:rgb(161, 0, 107);
+    background-color:rgb(122, 0, 82);
     box-shadow: 5px 10px 18px rgb(82, 82, 82);
     color:rgb(255, 193, 60);
+    font-family: 'Press Start 2P', cursive;
 }
 
 
@@ -42,18 +44,18 @@ body{
 
 
 .lastimg{
-    width: 300px;
+    width: 280px;
 }
 
 
 img{
     height: 280px;
-    width:auto;
+    width:280px;
 }
 
 .footer{
     padding:20px;
-    background-color: rgb(161, 0, 107);
+    background-color: rgb(122, 0, 82);
     color:rgb(255, 193, 60);
 }
 
@@ -63,6 +65,31 @@ img:hover{
     
 }
 
+
+
+img:active{
+    border: none;
+    box-shadow: none;
+    height: 280px;
+    width:280px;
+}
+
+
+
+.ps, .cs{
+    justify-content:center;
+}
+
 .pp{
-    margin:30px;
+    margin:0px 20px;
+}
+
+.body_part{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
+h3{
+    font-size: 130%;
 }

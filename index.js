@@ -39,33 +39,34 @@ img.forEach(element => {
     element.addEventListener('click',function(e){
         playerinp=this.getAttribute('data-key');
         console.log(playerinp);
+        play(playerinp);
+        if(scorep==5||scorec==5){
+            let temp1=checkScore();
+            document.querySelector('.last-part').innerText=temp1;
+            let temp2=document.querySelector('.body_part');
+            temp2.style.fontSize='40px';
+            document.querySelector('.toph').innerText='';
+            document.querySelector('h2').innerText='';
+        }
     })
 });
 
 
-let temp1=checkScore();
-let temp2=document.getElementsByClassName('last-part').innerText=temp1;
-temp2.style.fontSize('20px');
-document.getElementsByClassName('toph').innerText='';
-document.getElementsByTagName('h2').innerText='';
 
 
 function play(playerinp){
-    while(scorec<5||scorep<5){
         let temp=game(playerinp,computerPlay());
-        document.getElementsByClassName('ps').innerText= scorep;
-        document.getElementsByClassName('cs').innerText= scorec;
-        document.getElementsByClassName('toph').innerText=temp;
-    }
+        let x=document.querySelector('.ps').innerText= scorep;
+        document.querySelector('.cs').innerText= scorec;
+        document.querySelector('.toph').innerText=temp;
 }
 
+
 function checkScore(){
-    if(scorep>scorec){
+    if(scorep==5){
         return "You won against AI! You are the last hope for humanity when AI takes over the planet";
-    }else if(scorec<scorep){
+    }else if(scorec==5){
         return "You lost against a bot.";
-    }else{
-        return "You and the bot have the same score.";
     }
 }
 
