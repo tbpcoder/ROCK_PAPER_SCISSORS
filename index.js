@@ -32,7 +32,7 @@ function game(inp,temp){
 }
 
 
-
+let prev;
 let playerinp;
 let img=document.querySelectorAll('img');
 img.forEach(element => {
@@ -55,7 +55,11 @@ img.forEach(element => {
 
 
 function play(playerinp){
-        let temp=game(playerinp,computerPlay());
+    let comp=computerPlay();
+    while(comp==playerinp){
+        comp=computerPlay();
+    }
+        let temp=game(playerinp,comp);
         let x=document.querySelector('.ps').innerText= scorep;
         document.querySelector('.cs').innerText= scorec;
         document.querySelector('.toph').innerText=temp;
