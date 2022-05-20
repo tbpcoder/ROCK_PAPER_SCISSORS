@@ -9,7 +9,7 @@ body{
     color:rgb(0, 0, 0);
     margin:0;
     padding:0;
-    background-image: linear-gradient( rgb(161, 197, 0), rgb(0, 160, 53));
+    background-image: linear-gradient( rgb(255, 46, 46), rgb(102, 0, 143));
     justify-content:space-between;
     height: 100%;
     font-family: 'Roboto', sans-serif;
@@ -18,7 +18,7 @@ body{
 
 .header{
     padding:20px;
-    background-color:rgb(122, 0, 82);
+    background-color:rgb(155, 0, 103);
     box-shadow: 5px 10px 18px rgb(82, 82, 82);
     color:rgb(255, 193, 60);
     font-family: 'Press Start 2P', cursive;
@@ -55,7 +55,7 @@ img{
 
 .footer{
     padding:20px;
-    background-color: rgb(122, 0, 82);
+    background-color: rgb(92, 0, 61);
     color:rgb(255, 193, 60);
 }
 
